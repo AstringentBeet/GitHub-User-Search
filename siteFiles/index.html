@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" color-mode = "light">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <!--google fonts-->  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <!--stylesheet-->
+  <link rel="stylesheet" href="css/mini-reset.css">
+  <link rel="stylesheet" href="css/nmText.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--js and fontawesome-->
+  <script src="https://kit.fontawesome.com/561114b899.js" crossorigin="anonymous"></script>
+  <script src ="script.js" defer></script>
+  
+  <title>Frontend Mentor | GitHub user search app</title>
+
+</head>
+
+<body>
+  
+  <section class ="header">
+    <header class = "header_container">
+      <h1>devfinder</h1>
+      <button class = "header_toggle fc-p light--hidden">
+        <p>DARK</p>
+        <img src = ../images/icon-moon.svg>
+      </button>
+      <button class = "header_toggle fc-p dark--hidden">
+        <p>LIGHT</p>
+        <img src = ../images/icon-sun.svg>
+      </button>
+    </header>
+  </section>
+
+  <section class = "searchBar">
+    <form class = "searchBar_container">
+      <img src = "../images/icon-search.svg">
+      <input type = "search" placeholder = "Search GitHub Username..." id = "input" class = "searchBar_user" name = "searchBar_user">
+      <button class = "blue">search</button>
+    </form>
+  </section>
+
+  <main class = "userDisplay">
+
+    <section class ="profileHeader">
+      <img src = "" class = "profileHeader_photo">
+      <div class = profileHeader_info>
+        <h1 class = "profileHeader_name" id = "name"></h1>
+        <h4 class = "profileHeader_userName fc-p"></p>
+        <h4 class = "profileHeader_joined fc-alt"></p>
+      </div>
+    </section>
+
+    <section class = "bioStat">
+      <p class = "bioStat_content fc-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+    </section>
+
+    <section class = "ghStats">
+      <div class = "ghStats_container">
+
+        <div class = "ghStats_repo">
+          <h4>Repo</h4>
+          <h2 class = "ghStats_repo-count">23</h2>
+        </div>
+
+        <div class = "ghStats_followers">
+          <h4>Followers</h4>
+          <h2 class = "ghStats_followers-count">2</h2>
+        </div>
+
+        <div class = "ghStats_following">
+          <h4>Following</h4>
+          <h2 class = "ghStats_following-count">0</h2>
+        </div>
+
+      </div>
+    </section>
+
+    <section class = "miscStats">
+
+      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_location">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Not Available</p>
+      </span>
+
+      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_website">
+        <i class="fa-solid fa-link"></i>
+        <p>Not Available</p>
+      </span>
+
+      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_twitter">
+        <i class="fa-brands fa-twitter"></i>
+        <p>Not Available</p>
+      </span>
+
+      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_company">
+        <i class="fa-solid fa-building"></i>
+        <p>Not Available</p>
+      </span>
+
+    </section>
+
+  </main>
+</body>
+</html>
