@@ -1,0 +1,160 @@
+/***** ROOT VARIABLES *****/
+:root{
+
+    --fc-alt: hsl(217, 20%, 51%);
+
+    --noResult-red: hsl(0, 91%, 62%);
+
+    --clickBlue: hsl(212, 100%, 50%);
+    --clickBlue-hover: hsl(212, 100%, 69%);
+
+}
+
+:root[data-color-mode = "light"]{
+    --fc-sm: hsl(217, 35%, 45%);
+    --fc-lg: hsl(217, 21%,21%);
+    --mainBg: hsl(227, 100%, 98%);
+    --contentBg: hsl(0, 0%, 100%);
+}
+
+:root[data-color-mode = "light"] .dark--hidden{
+    display: none;
+}
+
+:root[data-color-mode = "dark"] {
+    --fc-sm: hsl(0, 0%, 100%);
+    --fc-lg: hsl(0, 0%, 100%);
+    --mainBg: hsl(220, 41%, 13%);
+    --contentBg: hsl(222, 41%, 20%);
+}
+
+:root[data-color-mode = "dark"] .light--hidden{
+    display: none;
+}
+
+.fc-p {color: var(--fc-sm)}
+.fc-alt {color: var(--fc-alt)}
+
+body{
+    background-color:var(--mainBg);
+    height: 100vh;
+}
+
+body,
+input,
+textarea,
+button {font-family: 'Space Mono', monospace}
+
+h1 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38px;
+    color: var(--fc-lg)
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--fc-lg)
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h4 {
+    font-weight: 400px;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+p {
+    font-weight: 400px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.header_container{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_container{
+    color: var(--fc-lg)
+}
+
+.header_toggle p { 
+    margin-right: 16px;
+}
+
+.header_toggle{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 89px;
+    height: 20px;
+}
+
+.searchBar_container{
+    border: 1px solid black;
+    background-color: var(--contentBg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchBar input {
+    color: var(--fc-sm);
+    background-color: var(--contentBg);
+    outline: none;
+    border: none;
+    display: block;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+main{
+    background-color: var(--contentBg);
+}
+
+.ghStats_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+    .ghStats_container h4 {color: var(--fc-alt)}
+    [data-color-mode = "dark"] .ghStats_container h4{color: var(--fc-sm)}
+
+.miscStats div{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.miscStats div p, .miscStats div a {
+    color: var(--fc-sm);
+    text-decoration: none
+}
+        
+.profileHeader_name {
+    color: var(--fc-lg)
+}
+
+.opacity{
+    opacity: .5;
+}
+
+.normal{
+    text-decoration: none;
+    color: var(--fc-sm);
+    cursor: auto;
+}

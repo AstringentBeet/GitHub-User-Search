@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" color-mode = "light">
+<html lang="en" data-color-mode = "light">
 <head>
 
   <meta charset="UTF-8">
@@ -14,8 +14,10 @@
 
   <!--stylesheet-->
   <link rel="stylesheet" href="css/mini-reset.css">
-  <link rel="stylesheet" href="css/nmText.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/desktop.css">
 
   <!--js and fontawesome-->
   <script src="https://kit.fontawesome.com/561114b899.js" crossorigin="anonymous"></script>
@@ -44,7 +46,7 @@
   <section class = "searchBar">
     <form class = "searchBar_container">
       <img src = "../images/icon-search.svg">
-      <input type = "search" placeholder = "Search GitHub Username..." id = "input" class = "searchBar_user" name = "searchBar_user">
+      <input type = "search" placeholder = "Search GitHub Username..." class = "searchBar_user" name = "searchBar_user">
       <button class = "blue">search</button>
     </form>
   </section>
@@ -61,7 +63,7 @@
     </section>
 
     <section class = "bioStat">
-      <p class = "bioStat_content fc-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+      <p class = "bioStat_content fc-p"></p>
     </section>
 
     <section class = "ghStats">
@@ -69,17 +71,17 @@
 
         <div class = "ghStats_repo">
           <h4>Repo</h4>
-          <h2 class = "ghStats_repo-count">23</h2>
+          <h2 class = "ghStats_repo-count"></h2>
         </div>
 
         <div class = "ghStats_followers">
           <h4>Followers</h4>
-          <h2 class = "ghStats_followers-count">2</h2>
+          <h2 class = "ghStats_followers-count"></h2>
         </div>
 
         <div class = "ghStats_following">
           <h4>Following</h4>
-          <h2 class = "ghStats_following-count">0</h2>
+          <h2 class = "ghStats_following-count"></h2>
         </div>
 
       </div>
@@ -87,25 +89,33 @@
 
     <section class = "miscStats">
 
-      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_location">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Not Available</p>
-      </span>
+      <div class = "miscStats_location">
+        <span style = "font-size: .9em; color: var(--fc-sm);">
+          <i class="fa-solid fa-location-dot"></i>
+        </span>
+        <p class= "miscStats_location--p"></p>
+      </div>
 
-      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_website">
-        <i class="fa-solid fa-link"></i>
-        <p>Not Available</p>
-      </span>
+      <div class = "miscStats_website">
+        <span style = "font-size: .875em; color: var(--fc-sm);">
+          <i class="fa-solid fa-link"></i>
+        </span>
+        <a href ="" class= "miscStats_website--a"></a>
+      </div>
 
-      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_twitter">
-        <i class="fa-brands fa-twitter"></i>
-        <p>Not Available</p>
-      </span>
+      <div class = "miscStats_twitter">
+        <span style = "font-size: 1em; color: var(--fc-sm);">
+          <i class="fa-brands fa-twitter"></i>
+        </span>
+        <a href ="" class= "miscStats_twitter--a"></a>
+      </div>
 
-      <span style = "font-size: 1em; color: var(--fc-sm);" class = "miscStats_company">
-        <i class="fa-solid fa-building"></i>
-        <p>Not Available</p>
-      </span>
+      <div class = "miscStats_company">
+        <span style = "font-size: 1em; color: var(--fc-sm);">
+          <i class="fa-solid fa-building"></i>
+        </span>
+        <a href ="" class= "miscStats_company--a"></a>
+      </div>
 
     </section>
 

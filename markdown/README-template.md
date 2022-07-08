@@ -109,7 +109,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
-
+https://web.dev/prefers-color-scheme/#activating-dark-mode-in-the-operating-system
 https://ryanfeigenbaum.com/dark-mode/#respecting-user-color-scheme-preference
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.

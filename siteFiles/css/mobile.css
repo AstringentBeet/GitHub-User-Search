@@ -1,0 +1,126 @@
+/*****Mobile Display *****/
+@media(min-width: 375px) {
+
+    p{
+        font-size: 13px;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header{
+        margin-top: 31px;
+        margin-bottom: 36px;
+    }
+
+        .header_container{
+            width: 327px;
+            height: 38px;
+        }
+
+    .searchBar{
+        margin-bottom: 16px;
+    }
+    .searchBar_container{
+        width: 327px;
+        height: 60px;
+    }
+
+        .searchBar input{
+            font-size: 13px;
+            line-height: 25px;
+            width: 184px;
+            height: 25px;
+        }
+
+    button.blue{
+        width: 84px;
+        height: 46px;
+        background-color: var(--clickBlue);
+        color: white;
+    }
+
+    .userDisplay{
+        width: 327px;
+        height: 517px;
+        overflow: auto;
+    }
+
+    .profileHeader{
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid black;
+        max-width: 233px;
+        max-height: 70px;
+    }
+        .profileHeader_photo{
+            width: 70px;
+            height: 70px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        .profileHeader_info{
+            border: 1px solid black;
+            width: 144px;
+            height:69px;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .profileHeader_info h1{
+                font-size: 16px;
+                line-height: 23.7px;
+            }
+            .profileHeader_joined{
+                margin-top: 6px;            
+            }
+
+
+    .bioStat_content{
+        margin-top: 33px;
+        margin-bottom: 23px;
+        width: 279px;
+        height: fit-content;
+    }
+
+    .ghStats_container{
+        width: 279px;
+        height: 85px;
+        background-color: var(--mainBg);
+        border: 1px solid black;
+    }
+
+   .miscStats{
+        margin-top: 24px;
+        border: 1px solid black;
+        max-width: 200px;
+        height: 127px;
+    }
+
+        .miscStats_location, .miscStats_website, .miscStats_twitter{
+            margin-bottom: 15.5px;
+        }
+
+        .miscStats i{
+            margin-right: 13px;
+        }
+
+        .miscStats div p, .miscStats a{
+            font-size: 13px;
+        }
+
+        .miscStats div {
+            height: 20px
+        }
+        .normal{
+            font-size: 13px;
+        }
+
+}

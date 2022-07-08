@@ -1,0 +1,27 @@
+@media(min-width: 1280px){
+
+    .header_container{
+        width: 730px;
+        height: 38px;
+    }
+
+    .searchBar_container{
+        height: 70px;
+        width: 730px;
+    }
+
+    .searchBar input{
+        outline: none;
+        display: block;
+        width: 254px;
+        height: 25px;
+    }
+
+    button {
+        width: 106px;
+        height: 50px;
+        background-color: var(--clickBlue);
+        color: white;
+    }
+
+}
