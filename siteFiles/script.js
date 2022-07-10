@@ -9,7 +9,7 @@ let photo = document.querySelector(".profileHeader_photo");
 let legName = document.querySelector(".profileHeader_name");
 //turn element into <a> tag; create a function inside of determine(display, source) to decrease lines and specificity
 let unDisplay = document.querySelector(".profileHeader_userName");
-let joined = document.querySelector(".profileHeader_joined");
+let created = document.querySelector(".profileHeader_joined");
 
 let bio = document.querySelector(".bioStat_content");
 
@@ -33,28 +33,36 @@ if (
     // if true, set the site to Dark Mode
     document.documentElement.setAttribute('data-color-mode', 'dark')
 }
-
-
 /*Toggle button for in-browser color-mode preference*/
-const colorMode = e => {
-    if(e.currentTarget.classList.contains("light--hidden")){
-        document.documentElement.setAttribute("data-color-mode", "dark");
-        localStorage.setItem("data-color-mode", "dark");
-        return
-        }
-    document.documentElement.setAttribute("data-color-mode", "light");
-    localStorage.setItem("data-color-mode", "light");
-    }
-
-    toggleBtn.forEach(btn => {
-        btn.addEventListener('click', colorMode)
+toggleBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+        if(e.currentTarget.classList.contains("light--hidden")){
+            document.documentElement.setAttribute("data-color-mode", "dark");
+            localStorage.setItem("data-color-mode", "dark");
+            return
+            }
+        document.documentElement.setAttribute("data-color-mode", "light");
+        localStorage.setItem("data-color-mode", "light");
     })
+})
 
 //Enables the 'Enter' / 'Return' key; initiates user search.
 let getData = e => {
     e.preventDefault();
     if (e.which === 13) { btn.click }
     findEm(loginInput.value)
+}
+
+//calculates number
+function joined(rdata){
+    let rdFormat = rdata.split("T").shift().split("-").map(Number);
+    let date = new Date(rdFormat);
+    let options = {month: "short", year: "numeric", day: "numeric"};
+    let arrDate = date.toLocaleString('en-us', options).replace(',', '').split(' ');
+    [arrDate[0], arrDate[1]] = [arrDate[1], arrDate[0]];
+    let newDate = arrDate.toString().replace(/[,]/g, " ");
+    rdata = newDate;
+    return newDate;
 }
 
 function findEm(un) {
@@ -64,13 +72,14 @@ function findEm(un) {
 
     xhr.onload = function() {
         if(xhr.status == 200){
-            let data = JSON.parse(this.response);
+            let data = JSON.parse(this.response); 
             //determines whether the name/pair data for each entry has value
-            function  determine(display, source) {
+            function determine(display, source) {
                 //RegExp-based url validation for both github and website links.
-                let regGh = /(?<=@[A-z])/;
+                let regGh = /(?<=@)\w/;
                 let regWeb = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$/
-
+                
+                //create seperate functions for this
                 if (source === null || source ==="") {
                     display.innerHTML = "not available";
                     //if an icon's element is processed, makes it transluscent along with the succeeding <p> tag.
@@ -78,7 +87,7 @@ function findEm(un) {
                     display.classList.add("opacity");
                 } else {
                     display.innerHTML = source;
-                    //if an icon's element is processed, makes it transluscent along with the succeeding <p> tag.
+                    //if an icon's element is deemed 
                     display.previousElementSibling.classList.remove("opacity");
                     display.classList.remove("opacity");
                 }
@@ -93,17 +102,14 @@ function findEm(un) {
                     display.classList.add("normal");
                     display.removeAttribute("href");
                   }
-        
                 if (display === twitter && source !== null) {
-                    display.innerHTML = "@" + display.innerHTML;
-                    display.href = `www.twitter.com/`+display.innerHTML;
+                    display.href = `htttps://www.twitter.com/`+display.innerHTML;
                     display.classList.remove("normal");
                     display.innerHTML = source;
-                } else if (display===twitter && source===null){
+                } else if (display === twitter && source === null){
                     display.classList.add("normal");
                     display.removeAttribute("href");
                 }
-
                 if(((display === company && source !== null)) && regGh.test(source)) {
                     display.href = `https://www.github.com/`+source.replace('@', '');
                     display.classList.remove("normal");
@@ -116,11 +122,10 @@ function findEm(un) {
                 }
 
             }
-            console.log(determine(repo, data.public_repos));
             photo.src = data.avatar_url;
             legName.innerHTML = data.name;
             unDisplay.innerHTML = "@" +data.login;
-            joined.innerHTML = "joined " + data.created_at;
+            created.innerHTML = "joined " + joined(data.created_at);
 
             if(data.bio === null) {
                 bio.innerHTML = "This profile has no bio.";

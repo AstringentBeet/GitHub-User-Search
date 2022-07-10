@@ -138,6 +138,11 @@ main{
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    
+}
+
+.miscStats_website, .miscStats_twitter, .miscStats_company {
+        cursor: pointer;
 }
 
 .miscStats div p, .miscStats div a {
@@ -147,6 +152,12 @@ main{
         
 .profileHeader_name {
     color: var(--fc-lg)
+}
+
+.profileHeader_userName {
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--clickBlue)
 }
 
 .opacity{

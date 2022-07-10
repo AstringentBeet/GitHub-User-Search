@@ -54,19 +54,18 @@
         margin-top: 32px;
         display: flex;
         justify-content: space-between;
-        border: 1px solid black;
         max-width: 233px;
         max-height: 70px;
     }
         .profileHeader_photo{
             width: 70px;
             height: 70px;
-            border: 1px solid black;
+
             border-radius: 50%;
         }
 
         .profileHeader_info{
-            border: 1px solid black;
+
             width: 144px;
             height:69px;
             justify-content: center;
@@ -94,12 +93,10 @@
         width: 279px;
         height: 85px;
         background-color: var(--mainBg);
-        border: 1px solid black;
     }
 
    .miscStats{
         margin-top: 24px;
-        border: 1px solid black;
         max-width: 200px;
         height: 127px;
     }
